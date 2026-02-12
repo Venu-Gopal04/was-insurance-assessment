@@ -732,6 +732,37 @@ input {
   }
 }
 
+.hero {
+  min-height: auto;
+  padding: 100px 16px 40px;
+}
+
+.hero-content {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 14px;
+}
+.quote-wrapper {
+  width: 100%;
+  max-width: 100%;
+  padding: 20px;
+}
+
+.hero {
+  background-position: center;
+  background-size: cover;
+}
+
+
 /* ================= MOBILE MENU ================= */
 
 /* Hide mobile menu by default (DESKTOP) */
