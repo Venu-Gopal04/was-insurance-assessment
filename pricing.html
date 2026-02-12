@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choose Plan</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Saira:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/pricing.css">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="pricing-header">
+    <div class="header-inner">
+      <span class="back">← Back</span>
+      <div class="logo">logoipsum</div>
+    </div>
+  </header>
+
+  <!-- ================= STEPPER ================= -->
+  <section class="stepper">
+    <div class="stepper-track">
+
+      <div class="step completed">
+        <div class="circle"></div>
+        <span>Get Quote</span>
+      </div>
+
+      <div class="line completed"></div>
+
+      <div class="step active">
+        <div class="airplane">✈</div>
+        <span>Plan Option</span>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="step">
+        <div class="circle"></div>
+        <span>Travellers</span>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="step">
+        <div class="circle"></div>
+        <span>Payment</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SUMMARY ================= -->
+  <section class="summary">
+    <div>Destination(s): <strong>Australia</strong></div>
+    <div>Dates: <strong>04/11/2025 - 13/11/2025</strong></div>
+    <div>Traveller Ages: <strong>23</strong> <button>Edit</button></div>
+  </section>
+
+  <!-- ================= PLAN COMPARISON ================= -->
+  <section class="plan-comparison">
+    <div class="comparison-grid">
+
+      <!-- EMPTY HEADER CELL -->
+      <div></div>
+
+      <!-- VOYAGER HEADER -->
+      <div class="plan-head active">
+        <div class="plan-icon dark"></div>
+        <h3>VOYAGER</h3>
+        <p class="old-price">From $17.37</p>
+        <p class="price">$15.98</p>
+        <span>Total Cost</span>
+      </div>
+
+      <!-- VOYAGER PLUS HEADER -->
+      <div class="plan-head">
+        <div class="plan-icon gold"></div>
+        <h3>VOYAGER PLUS</h3>
+        <p class="old-price">From $44.94</p>
+        <p class="price gold">$41.34</p>
+        <span>Total Cost</span>
+      </div>
+
+      <!-- ROW 1 -->
+      <div class="label">Cancellation or trip interruption</div>
+      <div class="value">$1,000</div>
+      <div class="value">
+        <select>
+          <option>$4,000</option>
+          <option>$2,000</option>
+          <option>$1,000</option>
+        </select>
+      </div>
+
+      <!-- ROW 2 -->
+      <div class="label">Luggage and personal effects</div>
+      <div class="value">$500</div>
+      <div class="value">
+        <select>
+          <option>$1,000</option>
+          <option>$500</option>
+        </select>
+      </div>
+
+      <!-- ROW 3 -->
+      <div class="label">Travel Delay</div>
+      <div class="value muted active">not available</div>
+      <div class="value">$1,000</div>
+
+      <!-- ROW 4 -->
+      <div class="label">Personal Liability</div>
+      <div class="value muted active">not available</div>
+      <div class="value">$2,500,000</div>
+
+      <!-- OPTIONAL COVER -->
+      <div class="label section-title">Optional Cover</div>
+      <div></div>
+      <div></div>
+      
+      <!-- RENTAL VEHICLE EXCESS -->
+<div class="label">
+  Rental Vehicle Excess
+  <span class="info-icon">i</span>
+</div>
+
+<div class="value muted active">not available</div>
+<div class="value">
+  <select>
+    <option>Not Selected</option>
+    <option>$2,000</option>
+    <option>$3,000</option>
+  </select>
+</div>
+
+
+<!-- SHOW ALL BENEFITS -->
+<div class="label">
+  <a href="#" class="show-benefits">Show All Benefits</a>
+</div>
+<div></div>
+<div></div>
+
+      <!-- BUTTON ROW -->
+      <div></div>
+      <div class="button-cell">
+        <button class="choose dark">CHOOSE PLAN</button>
+        <a href="#">View Policy Information</a>
+      </div>
+      <div class="button-cell">
+        <button class="choose yellow">CHOOSE PLAN</button>
+        <a href="#">View Policy Information</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- JS -->
+  <script src="js/pricing.js"></script>
+  <footer class="page-footer">
+  <div class="footer-inner">
+    ©2025 Logo Ipsum. All Rights Reserved.
+    <span>
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms & Conditions</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>

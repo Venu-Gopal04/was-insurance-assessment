@@ -1,0 +1,741 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;   /* ✅ only block horizontal scroll */
+  overflow-y: auto;     /* ✅ allow dropdown + content */
+}
+
+
+body {
+  font-family: 'Saira', sans-serif;
+  color: #212529;
+}
+
+/* NAVBAR */
+
+
+.nav-container {
+  max-width: 1320px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #212529;
+  font-size: 14px;
+}
+
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  background: url("../assets/hero.jpg") no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+
+.hero-content {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+/* TEXT */
+.hero-subtitle {
+  font-size: 24px;
+  line-height: 28.8px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-family: 'saira';
+
+}
+
+.hero-title {
+  font-family: 'Lato';
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+  margin-top: -9px;
+  margin-bottom: 18px;
+}
+
+.main-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+
+  z-index: 200;
+  background: transparent;
+}
+
+
+
+.header-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo span {
+  font-size: 20px;
+  font-weight: 700;
+}
+.nav-menu {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.arrow {
+  font-size: 12px;
+}
+
+
+
+.dropdown-content {
+  display: flex;
+  gap: 20px;
+}
+
+.dropdown-content img {
+  width: 200px;
+  border-radius: 6px;
+}
+
+.dropdown-text {
+  flex: 1;
+}
+
+.dropdown-text h4 {
+  margin-bottom: 10px;
+}
+
+.dropdown-links {
+  list-style: none;
+}
+
+.dropdown-links li {
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.yellow-btn {
+  background: #FFC533;
+  border: none;
+  padding: 10px 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* CARD */
+.quote-card {
+  width: 350px;
+  background: #ffffff;
+  padding: 5px 33px 20px;
+  margin: -29px auto 3;   /* 🔥 THIS pulls card under tabs */
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  position: relative;
+  z-index: 2;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-weight: bold;
+}
+
+.selected-destinations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+/* Selected destination chips */
+.selected-destination,
+.destination-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 4px 10px;        /* ↓ reduced padding */
+  font-size: 12px;          /* ↓ smaller text */
+  line-height: 1.2;
+
+  border-radius: 6px;
+  background-color: #0b2a4a;
+  color: #ffffff;
+
+  height: auto;             /* prevents tall chips */
+  max-height: 26px;         /* 🔑 controls chip height */
+}
+
+/* Close (×) button inside chip */
+.selected-destination button,
+.destination-chip button {
+  font-size: 12px;
+  line-height: 1;
+  padding: 0;
+  margin-left: 4px;
+}
+
+
+.chip {
+  background: #0c2340;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.chip button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.empty-state {
+  padding: 10px;
+  font-size: 13px;
+  color: #888;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  padding: 12px 14px;
+  cursor: pointer;
+  background: #fff;
+}
+
+.dropdown-input input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dropdown-input .arrow {
+  font-size: 14px;
+  color: #555;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  max-height: 260px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+.dropdown-section-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #667085;
+  padding: 10px 14px;
+}
+
+.dropdown-item {
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: #f2f4f7;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 6px 0;
+}
+
+.trip-tabs {
+  display: flex;
+  width: 150px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+  left: -35%;   
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 0;
+  font-weight: 600;
+  background: #ffffff;
+  border: none;
+  cursor: pointer;
+
+  border-top-left-radius: 10px;
+}
+
+.tab.active {
+  background: #FFC233;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 0px;
+}
+
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;      /* darker & bolder */
+  color: #1a1a1a;        /* dark text like Figma */
+  margin-bottom: 6px;
+}
+
+
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.age-btn {
+  width: 40px;
+  height: 40px;
+  background: #FFC533;
+  border: none;
+  cursor: pointer;
+}
+
+.promo {
+  margin: 16px 0;
+}
+
+.quote-btn {
+  width: 100%;
+  padding: 14px;
+  background: #FFC533;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.quote-wrapper {
+  width: 500px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.nav-item {
+  position: relative;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(60, 45, 20, 0.65);
+  display: none;
+  z-index: 90;
+}
+
+.overlay.show {
+  display: block;
+}
+
+.dropdown-panel {
+  position: fixed;
+  top: 80px;            /* below header */
+  left: 0;
+  width: 100vw;
+  background: #ffffff; 
+  display: none;
+  z-index: 1000;
+}
+
+
+.dropdown-panel.open {
+  display: block;
+}
+
+
+.dropdown-inner {
+  max-width: 1320px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  padding: 32px;
+}
+
+
+.dropdown-image {
+  display: block;
+}
+
+.mega-left img {
+  width: 220px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.mega-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;   
+  gap: 5px;
+  width: 520px;
+  margin-bottom: 12px;
+}
+
+.dropdown-content h3 {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #212529;
+
+}
+
+.dropdown-content p {
+  font-family: 'Saira', sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  color: #6c757d;
+  text-align: left;
+  margin: 1px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.dropdown-btn {
+  width: fit-content;
+  background: #FFC533;
+  border: none;
+  padding: 10px 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Navbar dropdown */
+.nav-item.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-item .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: #ffffff;
+  border-radius: 6px;
+  min-width: 180px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  display: none;
+  z-index: 1000;
+}
+
+.nav-item .dropdown-menu a {
+  display: block;
+  padding: 10px 14px;
+  color: #0b2a4a;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-item .dropdown-menu a:hover {
+  background: #f4f6f8;
+}
+
+/* OPEN STATE */
+.nav-item.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+/* ===== Mega Menu ===== */
+
+.mega-menu {
+  position: relative;
+}
+
+.mega-inner {
+  max-width: 1500px;
+  margin: -29px auto;          /* 🔥 centers content */
+  display: flex;
+  gap: 270px;
+}
+
+.mega-inner {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+
+.mega-menu-panel {
+  position: fixed;
+  top: 19px;
+  left: 0;
+  width: 100px;
+  background: transparent;
+  z-index: 9999;
+}
+
+
+
+.mega-menu-panel {
+  display: none;
+}
+
+.mega-menu.open .mega-menu-panel {
+  display: block;
+}
+
+
+
+
+.mega-left p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.mega-right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mega-right a {
+  text-decoration: none;
+  color: #002b5c;
+  font-weight: 500;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #ffc83d;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  width: 100px;              /* ❌ not full width */         /* matches Figma */
+  padding: 12px 24px;       /* correct height */
+  font-size: 14px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Travel Insurance dropdown – CLICK ONLY */
+
+/* NAV dropdown */
+.nav-item .dropdown-menu {
+  display: none;
+}
+
+.nav-item.open .dropdown-menu {
+  display: block;
+}
+
+/* Destination dropdown */
+.dropdown .dropdown-menu {
+  display: none;
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+.main-header,
+.header-container {
+  overflow: visible !important;
+}
+/* Mega menu links */
+
+.mega-menu-panel a {
+  text-decoration: none !important;
+  color: #0b2a4a !important;
+}
+
+.mega-menu-panel a:hover {
+  text-decoration: underline;
+}
+
+/* ===== FINAL MEGA MENU FIX ===== */
+
+.mega-menu-panel {
+  position: fixed;
+  top: 80px;               /* below header */
+  left: 0;
+  width: 100vw;
+  background: transparent;
+  z-index: 9999;
+}
+
+.dropdown-inner {
+  width: 1320px;
+  margin: 0 auto;
+  background: #ffffff;     /* 🔥 REQUIRED */
+  display: grid;
+  grid-template-columns: 260px 1fr 200px;
+  gap: 40px;
+  padding: 40px;
+  border-radius: 6px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+.dropdown-image {
+  display: block;
+}
+
+.dropdown-image img {
+  width: 220px;
+  height: auto;
+  display: block;
+}
+/* Right links — Figma style */
+.dropdown-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-links li {
+  margin-bottom: 12px;
+}
+
+.dropdown-links a {
+  text-decoration: none;
+  color: #0b2a4a;
+  font-weight: 500;
+}
+
+.dropdown-links a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+
+  /* Hide desktop nav */
+  .nav-menu,
+  .mega-menu-panel {
+    display: none !important;
+  }
+
+  /* Mobile menu container */
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: #fff;
+    z-index: 9999;
+    display: none;
+    padding: 20px;
+  }
+
+  .mobile-menu.open {
+    display: block;
+  }
+
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .mobile-nav .mobile-item {
+    font-size: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .mobile-toggle {
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 16px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mobile-submenu {
+    list-style: none;
+    padding-left: 16px;
+    margin-top: 10px;
+    display: none;
+  }
+
+  .mobile-submenu.open {
+    display: block;
+  }
+
+  .mobile-submenu li {
+    padding: 8px 0;
+    font-size: 14px;
+  }
+}
+
+/* ================= MOBILE MENU ================= */
+
+/* Hide mobile menu by default (DESKTOP) */
+.mobile-menu {
+  display: none;
+}
+
