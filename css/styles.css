@@ -1,8 +1,8 @@
 html, body {
   height: 100%;
   margin: 0;
-  overflow-x: hidden;   /* ✅ only block horizontal scroll */
-  overflow-y: auto;     /* ✅ allow dropdown + content */
+  overflow-x: hidden;   
+  overflow-y: auto;     
 }
 
 
@@ -46,7 +46,7 @@ body {
   text-align: center;
 }
 
-/* TEXT */
+
 .hero-subtitle {
   font-size: 24px;
   line-height: 28.8px;
@@ -150,7 +150,7 @@ body {
   width: 350px;
   background: #ffffff;
   padding: 5px 33px 20px;
-  margin: -29px auto 3;   /* 🔥 THIS pulls card under tabs */
+  margin: -29px auto 3;   
   text-align: left;
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
   position: relative;
@@ -174,16 +174,16 @@ body {
   align-items: center;
   gap: 6px;
 
-  padding: 4px 10px;        /* ↓ reduced padding */
-  font-size: 12px;          /* ↓ smaller text */
+  padding: 4px 10px;        
+  font-size: 12px;          
   line-height: 1.2;
 
   border-radius: 6px;
   background-color: #0b2a4a;
   color: #ffffff;
 
-  height: auto;             /* prevents tall chips */
-  max-height: 26px;         /* 🔑 controls chip height */
+  height: auto;             
+  max-height: 26px;         
 }
 
 /* Close (×) button inside chip */
@@ -334,8 +334,8 @@ body {
 
 .form-group label {
   font-size: 14px;
-  font-weight: 600;      /* darker & bolder */
-  color: #1a1a1a;        /* dark text like Figma */
+  font-weight: 600;      
+  color: #1a1a1a;        
   margin-bottom: 6px;
 }
 
@@ -396,7 +396,7 @@ input {
 
 .dropdown-panel {
   position: fixed;
-  top: 80px;            /* below header */
+  top: 80px;            
   left: 0;
   width: 100vw;
   background: #ffffff; 
@@ -503,12 +503,11 @@ input {
   background: #f4f6f8;
 }
 
-/* OPEN STATE */
 .nav-item.dropdown.open .dropdown-menu {
   display: block;
 }
 
-/* ===== Mega Menu ===== */
+
 
 .mega-menu {
   position: relative;
@@ -516,7 +515,7 @@ input {
 
 .mega-inner {
   max-width: 1500px;
-  margin: -29px auto;          /* 🔥 centers content */
+  margin: -29px auto;         
   display: flex;
   gap: 270px;
 }
@@ -575,16 +574,16 @@ input {
   font-weight: bold;
   color: #000;
   text-decoration: none;
-  width: 100px;              /* ❌ not full width */         /* matches Figma */
-  padding: 12px 24px;       /* correct height */
+  width: 100px;             
+  padding: 12px 24px;       
   font-size: 14px;
   border-radius: 4px;
   text-align: center;
 }
 
-/* Travel Insurance dropdown – CLICK ONLY */
 
-/* NAV dropdown */
+
+
 .nav-item .dropdown-menu {
   display: none;
 }
@@ -593,7 +592,7 @@ input {
   display: block;
 }
 
-/* Destination dropdown */
+
 .dropdown .dropdown-menu {
   display: none;
 }
@@ -606,7 +605,6 @@ input {
 .header-container {
   overflow: visible !important;
 }
-/* Mega menu links */
 
 .mega-menu-panel a {
   text-decoration: none !important;
@@ -617,11 +615,11 @@ input {
   text-decoration: underline;
 }
 
-/* ===== FINAL MEGA MENU FIX ===== */
+
 
 .mega-menu-panel {
   position: fixed;
-  top: 80px;               /* below header */
+  top: 80px;               
   left: 0;
   width: 100vw;
   background: transparent;
@@ -631,7 +629,7 @@ input {
 .dropdown-inner {
   width: 1320px;
   margin: 0 auto;
-  background: #ffffff;     /* 🔥 REQUIRED */
+  background: #ffffff;     
   display: grid;
   grid-template-columns: 260px 1fr 200px;
   gap: 40px;
@@ -648,7 +646,7 @@ input {
   height: auto;
   display: block;
 }
-/* Right links — Figma style */
+
 .dropdown-links {
   list-style: none;
   padding: 0;
@@ -670,16 +668,15 @@ input {
 }
 
 
-/* ================= MOBILE ONLY ================= */
 @media (max-width: 768px) {
 
-  /* Hide desktop navigation */
+  
   .nav-menu,
   .mega-menu-panel {
     display: none !important;
   }
 
-  /* Mobile menu overlay */
+  
   .mobile-menu {
     position: fixed;
     inset: 0;
@@ -732,7 +729,7 @@ input {
     font-size: 14px;
   }
 
-  /* ===== HERO MOBILE FIX ===== */
+  
   .hero {
     min-height: auto;
     padding: 120px 16px 40px;
@@ -762,9 +759,8 @@ input {
   }
 }
 
-/* ================= DESKTOP SAFETY ================= */
 
-/* Ensure mobile menu NEVER shows on desktop */
+
 @media (min-width: 769px) {
   .mobile-menu {
     display: none !important;
