@@ -1,4 +1,4 @@
-/* ================= RESET ================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +11,6 @@ body {
   color: #1a1a1a;
 }
 
-/* ================= HEADER ================= */
 .pricing-header {
   background: #0d2b4f;
   height: 64px;
@@ -41,7 +40,6 @@ body {
   font-weight: 700;
 }
 
-/* ================= STEPPER ================= */
 .stepper {
   max-width: 1320px;
   margin: 32px auto 24px;
@@ -106,7 +104,6 @@ body {
   background: #0d2b4f;
 }
 
-/* ================= SUMMARY ================= */
 .summary {
   max-width: 1320px;
   margin: 0 auto;
@@ -123,7 +120,6 @@ body {
   cursor: pointer;
 }
 
-/* ================= PLAN COMPARISON ================= */
 .plan-comparison {
   max-width: 1320px;
   margin: 40px auto;
@@ -137,7 +133,6 @@ body {
   grid-template-columns: 1.2fr 1fr 1fr;
 }
 
-/* ================= PLAN HEADERS ================= */
 .plan-head {
   padding: 32px;
   text-align: center;
@@ -196,7 +191,6 @@ body {
   color: #6b6b6b;
 }
 
-/* ================= TABLE ROWS ================= */
 .label,
 .value {
   padding: 18px 24px;
@@ -251,8 +245,6 @@ body {
   cursor: pointer;
 }
 
-
-/* ================= BUTTON ROW ================= */
 .button-cell {
   padding: 24px;
   text-align: center;
@@ -305,13 +297,11 @@ body {
   margin-left: 8px;
 }
 
-/* Grey text */
 .value.muted {
   color: #9aa0a6;
   font-style: italic;
 }
 
-/* Grey background for "not available" cells (Voyager column) */
 .value.muted.active {
   background: #f2f2f2;
 }
