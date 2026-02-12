@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  /* =====================================================
-     DESTINATION DROPDOWN (Where are you travelling?)
-     ===================================================== */
-
+ 
   const dropdown = document.getElementById("destinationDropdown");
   const input = document.getElementById("destinationInput");
   const menu = dropdown.querySelector(".dropdown-menu");
@@ -11,14 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let selected = [];
 
-  // Open dropdown
   input.addEventListener("click", (e) => {
     e.stopPropagation();
     dropdown.classList.add("open");
     filterItems(input.value);
   });
 
-  // Filter on typing
   input.addEventListener("input", () => {
     filterItems(input.value);
   });
@@ -93,10 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
     dropdown.classList.remove("open");
   });
 
-
-  /* =====================================================
-     TRAVEL INSURANCE MEGA MENU (CLICK ONLY)
-     ===================================================== */
 
   const megaMenu = document.querySelector(".mega-menu");
   const toggle = document.getElementById("travelToggle");
